@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'php/db_connect.php';
+require_once 'db_connect.php';
 
 // Check if admin is logged in
 if (!isset($_SESSION['admin_id'])) {
@@ -94,7 +94,7 @@ function sortLink($column, $current_sort, $current_order) {
     <title>Admin Dashboard - Event Organizer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/admin_dashboard.css">
+    <link rel="stylesheet" href="../css/admin_dashboard.css">
 </head>
 <body class="bg-gray-900 text-white">
     <div class="flex min-h-screen">
@@ -105,7 +105,7 @@ function sortLink($column, $current_sort, $current_order) {
                 <a href="admin.php?section=reviews" class="block py-2 px-4 mb-2 rounded <?php echo $section === 'reviews' ? 'bg-yellow-400 text-gray-900' : 'hover:bg-gray-700'; ?>">Reviews</a>
                 <a href="admin.php?section=contact" class="block py-2 px-4 mb-2 rounded <?php echo $section === 'contact' ? 'bg-yellow-400 text-gray-900' : 'hover:bg-gray-700'; ?>">Contact Messages</a>
                 <a href="admin.php?section=bookings" class="block py-2 px-4 mb-2 rounded <?php echo $section === 'bookings' ? 'bg-yellow-400 text-gray-900' : 'hover:bg-gray-700'; ?>">Bookings</a>
-                <a href="logout.php" class="block py-2 px-4 mt-4 rounded bg-yellow-400 text-gray-900 hover:bg-yellow-500">Logout</a>
+                <a href="admin_logout.php" class="block py-2 px-4 mt-4 rounded bg-yellow-400 text-gray-900 hover:bg-yellow-500">Logout</a>
             </nav>
         </div>
 
