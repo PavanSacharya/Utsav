@@ -1,0 +1,53 @@
+/* Admin Login Page Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222;
+    color: #fff;
+}
+
+.login-box {
+    background: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h2 {
+    margin-bottom: 1.5rem;
+    color: #f5c518;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    background: #444;
+    color: #fff;
+}
+
+.login-box .btn {
+    background: #f5c518;
+    color: #222;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.login-box .btn:hover {
+    background: #e0b015;
+}
+
+.error {
+    color: #ff5555;
+    margin-bottom: 1rem;
+}
