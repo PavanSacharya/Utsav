@@ -1,0 +1,756 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;600;700&display=swap');
+
+:root {
+    --main-color: #be9604;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #444;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+body {
+    background: #222;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    background: #666;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: var(--main-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+}
+
+.header .logo {
+    font-weight: bolder;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.header .logo span {
+    color: var(--main-color);
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    color: #fff;
+    margin-left: 2rem;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+}
+.navbar .auth-links {
+    display: inline-block;
+}
+
+/* Style the login/logout link */
+.navbar .auth-links {
+    display: inline-block;
+}
+
+.navbar .auth-links a {
+    display: inline-block;
+    background-color: #be9604;/* dark blue background */
+    color: #fff;               /* white text */
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    padding: 0.6rem 1.5rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 8px;        /* rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.navbar .auth-links a:hover {
+    background-color: #ecba03; /* hover effect */
+    color: #000;               /* black text on hover */
+}
+
+#menu-bars {
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.home .content {
+    text-align: center;
+    padding-top: 6rem;
+    margin: 2rem auto;
+    max-width: 70rem;
+}
+
+.home .content h3 {
+    color: #fff;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.home .content h3 span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.home .home-slider .swiper-slide {
+    overflow: hidden;
+    border-radius: .5rem;
+    height: 35rem;
+    width: 35rem;
+    gap: 2rem;
+}
+
+.home .home-slider .swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.service .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+}
+
+.service .box-container .box {
+    border-radius: .5rem;
+    background: #333;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.service .box-container .box i {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    background: var(--main-color);
+    color: #fff;
+}
+
+.service .box-container .box h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.service .box-container .box p {
+    font-size: 1.4rem;
+    color: #eee;
+    line-height: 1.8;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+    padding: 1rem;
+}
+
+.about .row .image img {
+    width: 100%;
+    border-radius: .5rem;
+    border: 1rem solid #333;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+}
+
+.about .row .content h3 {
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #eee;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.gallery .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery .box-container .box {
+    position: relative;
+    border: 1rem solid #333;
+    border-radius: .5rem;
+    height: 25rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gallery .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery .box-container .box:hover img {
+    transform: scale(1.1);
+    filter: grayscale();
+}
+
+.gallery .box-container .box .title {
+    position: absolute;
+    top: -10rem;
+    left: 0;
+    right: 0;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.gallery .box-container .box:hover .title {
+    top: 0;
+}
+
+.gallery .box-container .box .icons {
+    position: absolute;
+    bottom: -10rem;
+    left: 0;
+    right: 0;
+    background: #333;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.gallery .box-container .box:hover .icons {
+    bottom: 0;
+}
+
+.gallery .box-container .box .icons a {
+    font-size: 2rem;
+    margin: .5rem 1rem;
+    color: #fff;
+}
+
+.gallery .box-container .box .icons a:hover {
+    color: var(--main-color);
+}
+
+.price .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.price .box-container .box {
+    padding: 2rem 0;
+    background: #333;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.price .box-container .box:hover {
+    transform: scale(1.03);
+}
+
+.price .box-container .box .title {
+    background: var(--main-color);
+    color: #fff;
+    padding: 1.5rem 0;
+    font-size: 2rem;
+}
+
+.price .box-container .box .amount {
+    color: #fff;
+    padding-top: 2rem;
+    font-size: 4rem;
+}
+
+.price .box-container .box ul {
+    list-style-type: none;
+    padding: 1rem 0;
+}
+
+.price .box-container .box ul li {
+    font-size: 1.5rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.price .box-container .box ul li i {
+    color: var(--main-color);
+    padding-right: .5rem;
+}
+
+.review .box {
+    border-radius: .5rem;
+    background: #333;
+    padding: 2rem;
+    position: relative;
+}
+
+.review .box .fa-quote-right {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: var(--main-color);
+    font-size: 5rem;
+}
+
+.review .box .user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.review .box .user img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .box .user h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.review .box .user span {
+    font-size: 1.5rem;
+    color: #eee;
+}
+
+.review .box p {
+    line-height: 2;
+    color: #eee;
+    padding: .5rem 0;
+    font-size: 1.6rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.contact form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .inputBox input,
+.contact form textarea {
+    width: 100%;
+    background: #333;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: .7rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: none;
+}
+
+.contact form .inputBox input::placeholder,
+.contact form textarea::placeholder {
+    color: #eee;
+    text-transform: capitalize;
+}
+
+.contact form .inputBox input:focus,
+.contact form textarea:focus {
+    background: #444;
+}
+
+.contact form .inputBox input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.footer {
+     width: 100%;
+    padding: 2rem 0;
+    background: #111; /* example background */
+}
+
+.footer .box-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem; /* optional for spacing inside the container */
+    box-sizing: border-box;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.4rem;
+    padding: 0.8rem 0;
+    color: #eee;
+    text-decoration: none;
+    transition: padding-left 0.3s ease;
+}
+
+.footer .box-container .box a i {
+    padding-right: 0.5rem;
+    color: var(--main-color);
+    transition: padding-right 0.3s ease, color 0.3s ease;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 1rem;
+    color: #fff;
+}
+
+.footer .credit {
+    text-align: center;
+    border-top: 0.1rem solid #222;
+    color: #fff;
+    padding: 2rem;
+    padding-top: 2.5rem;
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.footer .credit span {
+    color: var(--main-color);
+}
+
+@media (max-width: 600px) {
+    .footer .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer .box-container .box h3 {
+        font-size: 1.8rem;
+    }
+
+    .footer .box-container .box a {
+        font-size: 1.2rem;
+    }
+
+    .footer .credit {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-bars {
+        display: initial;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: .1rem solid #222;
+        background: #333;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .fa-times {
+        transform: rotate(180deg);
+    }
+
+    .header .navbar a {
+        display: flex;
+        background: #222;
+        border-radius: .5rem;
+        padding: 1.3rem;
+        margin: 1.3rem;
+        font-size: 2rem;
+    }
+
+    .home .content h3 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home .home-slider .swiper-slide {
+        width: 27rem;
+    }
+
+    .contact form .inputBox input {
+        width: 100%;
+    }
+}
+
+.review-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.review-form .field label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.review-form input, .review-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+.review-form input:focus, .review-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+}
+.review-form button {
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.review-form button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Container styling */
+.review-form {
+  max-width: 400px;            
+  margin: 2rem auto;          
+  padding: 1rem;                  
+  background: #f9f9f9;            
+  border-radius: 6px;             
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  display: flex;                 
+  flex-direction: column;        
+}
+
+.review-form .field label {
+  display: block;                 
+  margin-bottom: 0.25rem;         
+}
+
+.review-form input[type="text"],
+.review-form textarea {
+  width: 100%;                    
+  padding: 0.6rem;                
+  border: 1px solid #ccc;         
+  border-radius: 4px;           
+  font: inherit;               
+  resize: vertical;               
+  transition: border-color 0.2s;  
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+  outline: none;                  
+  border-color: #007bff;         
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.2); 
+}
+
+.review-form button[type="submit"] {
+  padding: 0.75rem;               
+  background-color: #007bff;      
+  color: #fff;                    
+  border: none;                   
+  border-radius: 4px;           
+  font-size: 1rem;                
+  cursor: pointer;                
+  transition: background-color 0.2s;  
+}
+
+.review-form button:hover {
+  background-color: #0056b3;     
+}
+
+/*review form*/
+/* Review Submission Section */
+.review-submit {
+    padding: 5rem 0;
+    background: #222;
+    text-align: center;
+}
+
+.review-submit .heading {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+.review-submit .heading span {
+    color: #f5c518;
+}
+
+.review-submit form {
+    max-width: 350px;
+    min-height:350px ;
+    margin: 0 auto;
+    background: #2a2a2a;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.review-submit .input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.review-submit .input-group label {
+    display: block;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.review-submit .input-group input,
+.review-submit .input-group textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background: #3a3a3a;
+    border: none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+
+.review-submit .input-group input[readonly] {
+    background: #4a4a4a;
+    cursor: not-allowed;
+}
+
+.review-submit .input-group textarea {
+    resize: vertical;
+}
+
+.review-submit .btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: #000;
+    background: #f5c518;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.review-submit .btn:hover {
+    background: #e0b310;
+}
+
+/* Ensure Review Section Consistency */
+.review .swiper-slide p strong {
+    color: #f5c518;
+}
