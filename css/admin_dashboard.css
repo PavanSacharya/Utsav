@@ -3,16 +3,14 @@ body {
     background: #222;
 }
 
-table tr:hover {
-    background: #3a3a3a;
-}
+
 
 .sort-link {
-    color: #222;
+
     text-decoration: none;
 }
 
 .sort-link:hover {
-    color: #000;
+    
     text-decoration: underline;
 }

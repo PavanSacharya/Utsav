@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p class="error"><?php echo htmlspecialchars($error); ?></p>
             <?php endif; ?>
             <form action="admin_login.php" method="POST">
-                <input type="text" name="identifier" placeholder="Username or Email" required>
+                <input type="text" name="identifier" placeholder="Username" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit" class="btn">Login</button>
             </form>

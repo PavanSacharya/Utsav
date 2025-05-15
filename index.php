@@ -23,97 +23,126 @@ try {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <title>Utsav</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@11.2.6/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
 <header class="header">
-    <a href="index.php" class="logo"> <span>evento</span> </a>
-    <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#service">service</a>
-        <a href="#about">about</a>
-        <a href="#gallery">gallery</a>
-        <a href="#price">price</a>
-        <a href="#review">review</a>
-        <a href="#contact">contact</a>
-        <div class="auth-links">
-            <?php if (isset($_SESSION['user_id'])): ?>
-                <a href="php/logout.php">logout</a>
-            <?php else: ?>
-                <a href="php/login.php">login</a>
-            <?php endif; ?>
-        </div>
-    </nav>
-    <div id="menu-bars" class="fas fa-bars"></div>
+  <div class="logo-wrapper">
+    <a href="index.php" class="logo"><span>UTSAV</span></a>
+    <div class="logo-subtitle"><span style="color:#eae2b7; align:center">CELEBRATE EVERY MOMENT</span></div>
+
+  </div>
+
+  <nav class="navbar">
+    <a href="#home">home</a>
+    <a href="#service">service</a>
+    <a href="#about">about</a>
+    <a href="#gallery">gallery</a>
+    <a href="#price">price</a>
+    <a href="#review">review</a>
+    <a href="#contact">contact</a>
+    <div class="auth-links">
+      <?php if (isset($_SESSION['user_id'])): ?>
+          <a href="php/logout.php">logout</a>
+      <?php else: ?>
+          <a href="php/login.php">login</a>
+      <?php endif; ?>
+    </div>
+  </nav>
+
+  <div id="menu-bars" class="fas fa-bars"></div>
 </header>
 
+
 <section class="home" id="home">
+
     <div class="content">
-        <h3>its time to celebrate! the best <span>event organizers</span></h3>
-        
+        <h3>its time to celebrate! the best <span> event organizers </span></h3>
+        <a href="#" class="btn">contact us</a>
     </div>
-    <div class="swiper home-slider">
+
+    <div class="swiper-container home-slider">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="im" alt=""></div>
-            <div class="swiper-slide"><img src="images/home-img-2.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/home-img-3.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/home-img-4.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/home-img-5.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/home-img-6.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/slider-1.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/slider-2.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/slider-3.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/slider-4.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/slider-5.png" alt=""></div>
         </div>
     </div>
+
 </section>
 
+
+
+
+<!-- service section starts  -->
+
 <section class="service" id="service">
+
     <h1 class="heading"> our <span>services</span> </h1>
+
     <div class="box-container">
+
         <div class="box">
             <i class="fas fa-map-marker-alt"></i>
             <h3>venue selection</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+            <p>Choose from a curated list of top-rated venues based on your event type, guest size, and location preferences. Browse photos, check availability, and find the perfect space to make your event unforgettable..</p>
         </div>
+
         <div class="box">
             <i class="fas fa-envelope"></i>
             <h3>invitation card</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+            <p>Design elegant and personalized invitation cards that match your event theme. Choose from a variety of templates or upload your own design.</p>
         </div>
+
         <div class="box">
             <i class="fas fa-music"></i>
             <h3>entertainment</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+            <p>From live music to DJs and cultural performances, select entertainment options that will keep your guests engaged and energized throughout the event.</p>
         </div>
+
         <div class="box">
             <i class="fas fa-utensils"></i>
             <h3>food and drinks</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+            <p>Explore catering services offering a wide variety of cuisines, beverages, and dining styles—from buffets to plated meals—to suit your guests' tastes.</p>
         </div>
+
         <div class="box">
             <i class="fas fa-photo-video"></i>
             <h3>photos and videos</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+            <p>Hire professional photographers and videographers to capture every special moment. Relive your event through beautifully edited albums and highlight reels.
+
+</p>
         </div>
+
         <div class="box">
             <i class="fas fa-birthday-cake"></i>
             <h3>custom food</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+            <p>Create a personalized menu that fits your theme, dietary preferences, or cultural tastes. Work with chefs to craft dishes that make your event unique and memorable.
+
+</p>
         </div>
+
     </div>
+
 </section>
 
 <section class="about" id="about">
     <h1 class="heading"> <span>about</span> us </h1>
     <div class="row">
         <div class="image">
-            <img src="images/about-img.jpg" alt="">
+            <img src="images/aboutus.png" alt="">
         </div>
         <div class="content">
             <h3>we will give a very special celebration for you</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam labore fugiat ut esse perferendis perspiciatis provident dolores fuga in facilis culpa possimus, quia praesentium itaque, sapiente quasi harum rem asperiores.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat vero expedita incidunt provident quibusdam aut odit, numquam nesciunt similique nisi.</p>
+            <p>Welcome to Utsav, where every celebration becomes a cherished memory. As a proud Indian event management company, we specialize in crafting unforgettable experiences—be it weddings, corporate gatherings, or festive functions. With a passion for perfection and deep cultural roots, our team handles everything from venue selection and custom invitations to entertainment, catering, and photography. At Utsav, we don’t just plan events we create moments that last a lifetime.
+
+</p>
+            <p>Utsav – Crafting unforgettable moments, one celebration at a time.</p>
             <a href="#contact" class="btn">contact us</a>
         </div>
     </div>
@@ -123,8 +152,8 @@ try {
     <h1 class="heading"> our <span>gallery</span> </h1>
     <div class="box-container">
         <div class="box">
-            <img src="images/gallery-img-1.jpg" alt="">
-            <div class="title">photos and events</div>
+            <img src="images/tra-1.png" alt="">
+            <div class="title">Traditional wedding</div>
             <div class="icons">
                 <a href="#" class="fas fa-eye"></a>
                 <a href="#" class="fas fa-heart"></a>
@@ -132,8 +161,8 @@ try {
             </div>
         </div>
         <div class="box">
-            <img src="images/gallery-img-2.jpg" alt="">
-            <div class="title">photos and events</div>
+            <img src="images/gallery-2.png" alt="">
+            <div class="title">Western wedding</div>
             <div class="icons">
                 <a href="#" class="fas fa-eye"></a>
                 <a href="#" class="fas fa-heart"></a>
@@ -141,8 +170,8 @@ try {
             </div>
         </div>
         <div class="box">
-            <img src="images/gallery-img-3.jpg" alt="">
-            <div class="title">photos and events</div>
+            <img src="images/gallery-3.png" alt="">
+            <div class="title">Birthday party </div>
             <div class="icons">
                 <a href="#" class="fas fa-eye"></a>
                 <a href="#" class="fas fa-heart"></a>
@@ -150,8 +179,8 @@ try {
             </div>
         </div>
         <div class="box">
-            <img src="images/gallery-img-4.jpg" alt="">
-            <div class="title">photos and events</div>
+            <img src="images/gallery-4.png" alt="">
+            <div class="title">Concert</div>
             <div class="icons">
                 <a href="#" class="fas fa-eye"></a>
                 <a href="#" class="fas fa-heart"></a>
@@ -159,8 +188,8 @@ try {
             </div>
         </div>
         <div class="box">
-            <img src="images/gallery-img-5.jpg" alt="">
-            <div class="title">photos and events</div>
+            <img src="images/gallery-5png.png" alt="">
+            <div class="title">Corparate Event</div>
             <div class="icons">
                 <a href="#" class="fas fa-eye"></a>
                 <a href="#" class="fas fa-heart"></a>
@@ -168,8 +197,8 @@ try {
             </div>
         </div>
         <div class="box">
-            <img src="images/gallery-img-6.jpg" alt="">
-            <div class="title">photos and events</div>
+            <img src="images/gallery-6.png" alt="">
+            <div class="title">Open Ground </div>
             <div class="icons">
                 <a href="#" class="fas fa-eye"></a>
                 <a href="#" class="fas fa-heart"></a>
@@ -177,8 +206,8 @@ try {
             </div>
         </div>
         <div class="box">
-            <img src="images/gallery-img-7.jpg" alt="">
-            <div class="title">photos and events</div>
+            <img src="images/gallery-7.png" alt="">
+            <div class="title">college Fest</div>
             <div class="icons">
                 <a href="#" class="fas fa-eye"></a>
                 <a href="#" class="fas fa-heart"></a>
@@ -186,17 +215,8 @@ try {
             </div>
         </div>
         <div class="box">
-            <img src="images/gallery-img-8.jpg" alt="">
-            <div class="title">photos and events</div>
-            <div class="icons">
-                <a href="#" class="fas fa-eye"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share-alt"></a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/gallery-img-9.jpg" alt="">
-            <div class="title">photos and events</div>
+            <img src="images/gallery-8.png" alt="">
+            <div class="title">Cultural Fest</div>
             <div class="icons">
                 <a href="#" class="fas fa-eye"></a>
                 <a href="#" class="fas fa-heart"></a>
@@ -211,9 +231,9 @@ try {
     <div class="box-container">
         <div class="box">
             <h3 class="title">for birthdays</h3>
-            <h3 class="amount">$250.99</h3>
+            <h3 class="amount">₹3,50,000</h3>
             <ul>
-                <li><i class="fas fa-check"></i>full services</li>
+                <li><i class="fas fa-check"></i>Cake</li>
                 <li><i class="fas fa-check"></i>decorations</li>
                 <li><i class="fas fa-check"></i>music and photos</li>
                 <li><i class="fas fa-check"></i>food and drinks</li>
@@ -223,7 +243,7 @@ try {
         </div>
         <div class="box">
             <h3 class="title">for weddings</h3>
-            <h3 class="amount">$450.99</h3>
+            <h3 class="amount">₹10,50,000</h3>
             <ul>
                 <li><i class="fas fa-check"></i>full services</li>
                 <li><i class="fas fa-check"></i>decorations</li>
@@ -235,21 +255,21 @@ try {
         </div>
         <div class="box">
             <h3 class="title">for concerts</h3>
-            <h3 class="amount">$650.99</h3>
+            <h3 class="amount">₹40,50,000</h3>
             <ul>
-                <li><i class="fas fa-check"></i>full services</li>
-                <li><i class="fas fa-check"></i>decorations</li>
+                <li><i class="fas fa-check"></i>artist(selected)</li>
+                <li><i class="fas fa-check"></i>Sounds and light</li>
                 <li><i class="fas fa-check"></i>music and photos</li>
                 <li><i class="fas fa-check"></i>food and drinks</li>
-                <li><i class="fas fa-check"></i>invitation card</li>
+                <li><i class="fas fa-check"></i>Security</li>
             </ul>
             <a href="php/book_event.php?event=Concerts" class="btn open-booking" data-event="Concerts">book now</a>
         </div>
         <div class="box">
             <h3 class="title">for others</h3>
-            <h3 class="amount">$850.99</h3>
+            <h3 class="amount">₹15,50,000</h3>
             <ul>
-                <li><i class="fas fa-check"></i>full services</li>
+                <li><i class="fas fa-check"></i>Event type</li>
                 <li><i class="fas fa-check"></i>decorations</li>
                 <li><i class="fas fa-check"></i>music and photos</li>
                 <li><i class="fas fa-check"></i>food and drinks</li>
@@ -316,51 +336,6 @@ try {
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
-                <!-- Hardcoded reviews -->
-                <div class="swiper-slide box">
-                    <i class="fas fa-quote-right"></i>
-                    <div class="user">
-                        <img src="images/pic-1.png" alt="">
-                        <div class="user-info">
-                            <h3>john deo</h3>
-                            <span>happy clients</span>
-                        </div>
-                    </div>
-                    <p><strong>Great Service:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis voluptatibus nihil.</p>
-                </div>
-                <div class="swiper-slide box">
-                    <i class="fas fa-quote-right"></i>
-                    <div class="user">
-                        <img src="images/pic-2.png" alt="">
-                        <div class="user-info">
-                            <h3>john deo</h3>
-                            <span>happy clients</span>
-                        </div>
-                    </div>
-                    <p><strong>Memorable Event:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis voluptatibus nihil.</p>
-                </div>
-                <div class="swiper-slide box">
-                    <i class="fas fa-quote-right"></i>
-                    <div class="user">
-                        <img src="images/pic-3.png" alt="">
-                        <div class="user-info">
-                            <h3>john deo</h3>
-                            <span>happy clients</span>
-                        </div>
-                    </div>
-                    <p><strong>Perfect Planning:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis voluptatibus nihil.</p>
-                </div>
-                <div class="swiper-slide box">
-                    <i class="fas fa-quote-right"></i>
-                    <div class="user">
-                        <img src="images/pic-4.png" alt="">
-                        <div class="user-info">
-                            <h3>john deo</h3>
-                            <span>happy clients</span>
-                        </div>
-                    </div>
-                    <p><strong>Highly Recommend:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis voluptatibus nihil.</p>
-                </div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -387,11 +362,11 @@ try {
     <div class="box-container">
         <div class="box">
             <h3>branches</h3>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> mumbai </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> jogeshwari </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> goregaon </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Udupi(head Office) </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Mangalore </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> bangalore </a>
             <a href="#"> <i class="fas fa-map-marker-alt"></i> navi mumbai </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> andheri </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Kochi </a>
         </div>
         <div class="box">
             <h3>quick links</h3>
@@ -405,29 +380,30 @@ try {
         </div>
         <div class="box">
             <h3>contact info</h3>
-            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
-            <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
-            <a href="#"> <i class="fas fa-envelope"></i> event@example.com </a>
-            <a href="#"> <i class="fas fa-envelope"></i> contact@example.com </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </a>
+            <a href="#"> <i class="fas fa-phone"></i> 8970931564 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +98970563 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> utsavevent@example.com </a>
+            <a href="#"> <i class="fas fa-envelope"></i> adminutsavacontact@example.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Udupi, Karnatak,india - 5741115 </a>
         </div>
         <div class="box">
             <h3>follow us</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="#footer"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#footer"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#footer"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#footer"> <i class="fab fa-linkedin"></i> linkedin </a>
         </div>
     </div>
-    <div class="credit"> created by <span>MD.RAZI-SHAH</span> | all rights reserved </div>
+    <div class="credit"> created by <span>Utsav_Event</span> |2025@all rights reserved </div>
 </section>
 
 <!-- Add this part inside your index.php file, just before the closing </body> tag -->
 
 
 
-<!-- Script for swiper -->
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/swiper@11.2.6/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
 <script src="js/script.js"></script>
 
 

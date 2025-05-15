@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}
 // Include the database connection file with the correct path
 try {
     require_once 'db_connect.php';
